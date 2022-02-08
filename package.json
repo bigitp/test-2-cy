@@ -1,0 +1,19 @@
+{
+  "name": "react1jscal",
+  "homepage": "https://cevapins.rs/1027react",
+  "version": "1.0.0",
+  "description": "conv js v to rect",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pr1",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "snowpack": "^3.8.8"
+  }
+}
