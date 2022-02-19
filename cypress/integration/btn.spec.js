@@ -20,7 +20,7 @@ describe('buttons functionality', () => {
         cy.contains('New Event').should('exist')
       })
 
-    it('chage a month ', () => {
+    it('change a month ', () => {
 
         cy.contains('Next').click()
 
@@ -30,6 +30,34 @@ describe('buttons functionality', () => {
 
         cy.contains(nextMonth).should('exist')
       })
+
+      it('check is saveing new event', () => {
+
+        cy.get('.currentDay').click()
+
+        cy.get('#eventTitleInput').type('Have to go to meeting')
+        cy.contains('Save').click()
+
+        cy.get('.currentDay').click()
+        cy.contains('Delete').should('exist')
+
+      })
+
+      it('check is Cancel btn closing a new event modal', () => {
+
+        cy.get('.currentDay').click()
+        cy.contains('Cancel').click()
+
+        cy.contains('New Event').should('not.exist')
+      })
+
+      it('check is padding day is not clicable', () => {
+
+        cy.get('.padding').click({ multiple: true })
+
+        cy.contains('New Event').should('not.exist')
+      })
+
 
 
 })
